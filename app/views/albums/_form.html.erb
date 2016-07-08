@@ -1,0 +1,20 @@
+<%= form_for @album do |f| %>
+  <p>
+    <%= f.label :autor %><br>
+    <%= f.select(:author, [['Ülle Algma-Vare'], ['Raivo Vare']]) %>
+  </p>
+  
+  <p>
+	<% if @album.errors.any? %>
+		<div id="error_explanation">
+			<strong>Albumi nimi ei tohi olla tühi!</strong>
+		</div>
+	<% end %>
+    <%= f.label :albumi_nimi %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Salvesta" %>
+  </p>
+<% end %>

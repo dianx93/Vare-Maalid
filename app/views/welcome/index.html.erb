@@ -1,5 +1,26 @@
 <h1>Vare Maalid</h1>
 
+<!-- Header -->
+<%= link_to 'Avaleht', root_path %>
+<%= link_to 'Maalid', controller: 'albums' %>
+<%= link_to 'Näitused', root_path %>
+<%= link_to 'Taustainfo', root_path %>
+<%= link_to 'Kontakt', root_path %>
+
+<!-- Body -->
+<h2>Avaleht</h2>
+<!-- text -->
+<!-- pildid -->
+<p>
+	Vaata veel maale <%= link_to 'SIIT', controller: 'albums' %>
+</p>
+
+<!-- näitus -->
+<p>
+	Veel infot näitustest <%= link_to 'SIIN', root_path %>
+</p>
+
+<!-- eemaldada -->
 <p>
 	See koduleht pole hetkel valmis.
 </p>
@@ -8,6 +29,13 @@
 	Töötav lehekülg: <%= link_to 'Vare Maalid', 'http://varemaalid.webs.com' %>
 </p>
 
+<!-- footer -->
+<!-- LIKE/SHARE -->
+<%= link_to 'Kontakt', root_path %>
+Veebilehe looja: Diana Algma
+<%= link_to 'Logi sisse', root_path %>
+
+<!-- eemaldada -->
 <p>
   Aeg praegu: <%= Time.now %>
 </p>

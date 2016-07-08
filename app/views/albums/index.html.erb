@@ -1,10 +1,13 @@
-<h1>Albumid</h1>
+<h1>Maalid</h1>
+
+<%= link_to 'Lisa uus album', new_album_path %>
 
 <h2>Ülle Algma-Vare</h2>
 <% @albums.each do |album| %>
 	<% if album.author == 'Ülle Algma-Vare' %>
 		<%= album.name %><br>
 		<%= link_to 'Vaata albumit', album_path(album) %><br>
+		<%= link_to 'Muuda albumit', edit_album_path(album) %><br>
 	<% end %>
 <% end %>
 
@@ -13,5 +16,6 @@
 	<% if album.author == 'Raivo Vare' %>
 		<%= album.name %><br>
 		<%= link_to 'Vaata albumit', album_path(album) %><br>
+		<%= link_to 'Muuda albumit', edit_album_path(album) %><br>
 	<% end %>
 <% end %>
