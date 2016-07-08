@@ -1,0 +1,17 @@
+<h1>Uus album</h1>
+
+<%= form_for :album, url: albums_path do |f| %>
+  <p>
+    <%= f.label :autor %><br>
+    <%= f.select(:author, [['Ülle Algma-Vare'], ['Raivo Vare']]) %>
+  </p>
+  
+  <p>
+    <%= f.label :albumi_nimi %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

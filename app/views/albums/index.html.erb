@@ -1,0 +1,17 @@
+<h1>Albumid</h1>
+
+<h2>Ülle Algma-Vare</h2>
+<% @albums.each do |album| %>
+	<% if album.author == 'Ülle Algma-Vare' %>
+		<%= album.name %><br>
+		<%= link_to 'Vaata albumit', album_path(album) %><br>
+	<% end %>
+<% end %>
+
+<h2>Raivo Vare</h2>
+<% @albums.each do |album| %>
+	<% if album.author == 'Raivo Vare' %>
+		<%= album.name %><br>
+		<%= link_to 'Vaata albumit', album_path(album) %><br>
+	<% end %>
+<% end %>

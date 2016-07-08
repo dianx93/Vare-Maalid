@@ -1,2 +1,0 @@
-class AvalehtController < ApplicationController
-end
