@@ -8,6 +8,7 @@
 		<%= album.name %><br>
 		<%= link_to 'Vaata albumit', album_path(album) %><br>
 		<%= link_to 'Muuda albumit', edit_album_path(album) %><br>
+		<%= button_to 'Kustuta album', album_path(album), method: :delete, data: { confirm: "Kas oled kindel, et tahad kustutada albumi koos kõigi piltidega?" } %>
 	<% end %>
 <% end %>
 
@@ -17,5 +18,6 @@
 		<%= album.name %><br>
 		<%= link_to 'Vaata albumit', album_path(album) %><br>
 		<%= link_to 'Muuda albumit', edit_album_path(album) %><br>
+		<%= button_to 'Kustuta album', album_path(album), method: :delete, data: { confirm: "Kas oled kindel, et tahad kustutada albumi koos kõigi piltidega?" } %>
 	<% end %>
 <% end %>
