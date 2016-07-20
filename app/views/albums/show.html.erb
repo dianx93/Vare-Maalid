@@ -2,5 +2,56 @@
 	(<%= @album.author %>) <strong><%= @album.name %></strong>
 </p>
 
+<h2>Teosed</h2>
+<% @album.artworks.each do |work| %>
+	<p>
+		<strong>"<%= work.title %>"</strong><br>
+		<%= work.author %><br>
+		<%= work.year %><br>
+		<%= work.style %><br>
+		mõõtmed: <%= work.height %> x <%= work.width %><br>
+		<%= work.picture %><br>
+		<%= cl_image_tag(work.picture, width: 100) %>
+	</p>
+<% end %>
+
+<h2>Lisa albumisse teos:</h2>
+<%= form_for([@album, @album.artworks.build]) do |f| %>
+  <p>
+    <%= f.label :pealkiri %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :aasta %><br>
+    <%= f.number_field :year %>
+  </p>
+  <p>
+    <%= f.label :tüüp %><br>
+    <%= f.text_field :style %>
+  </p>
+  <p>
+    <%= f.label :kõrgus %><br>
+    <%= f.number_field :height %>
+  </p>
+  <p>
+    <%= f.label :laius %><br>
+    <%= f.number_field :width %>
+  </p>
+  <p>
+    <%= f.hidden_field :author, :value => @album.author %>
+  </p>
+  <div class="upload_button_holder">
+    <%= link_to("Upload", "#", :class => "upload_button") %>
+    <%= f.cl_image_upload(:picture, :return_delete_token=>true) %>
+  </div>
+  <!--
+  <p>
+	<%= f.cl_image_upload(:picture) %>
+  </p> -->
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+ 
 <%= link_to 'Muuda albumit', edit_album_path(@album) %> | 
 <%= link_to 'Tagasi albumite juurde', albums_path %>
