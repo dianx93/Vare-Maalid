@@ -1,4 +1,5 @@
 class Artwork < ActiveRecord::Base
 	belongs_to :album
-	validates :title, :style, presence: true
+	validates_presence_of :style
+	mount_uploader :picture, PictureUploader
 end

@@ -3,7 +3,7 @@
 <!-- Header -->
 <%= link_to 'Avaleht', root_path %>
 <%= link_to 'Maalid', controller: 'albums' %>
-<%= link_to 'Näitused', root_path %>
+<%= link_to 'Näitused', controller: 'exhibitions' %>
 <%= link_to 'Taustainfo', root_path %>
 <%= link_to 'Kontakt', root_path %>
 
@@ -17,7 +17,7 @@
 
 <!-- näitus -->
 <p>
-	Veel infot näitustest <%= link_to 'SIIN', root_path %>
+	Veel infot näitustest <%= link_to 'SIIN', controller: 'exhibitions' %>
 </p>
 
 <!-- eemaldada -->

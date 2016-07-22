@@ -1,0 +1,15 @@
+<h1>Näitused</h1>
+
+<%= link_to 'Lisa uus näitus', new_exhibition_path %><br>
+
+<% @exhibitions.each do |ex| %>
+	<div>
+		<h3><%= ex.name %></h3>
+		<%= ex.location %><br>
+		<%= ex.duration %><br>
+		<p>-kuulutus-</p>
+		<p>-pildid-</p>
+		<%= link_to 'Muuda näitust', edit_exhibition_path(ex) %><br>
+		<%= button_to 'Kustuta näitus', exhibition_path(ex), method: :delete, data: { confirm: "Kas oled kindel, et tahad kustutada näituse koos kõigi andmete ja piltidega?" } %>
+	</div>
+<% end %>

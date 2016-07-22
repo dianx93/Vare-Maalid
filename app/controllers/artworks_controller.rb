@@ -17,6 +17,13 @@ class ArtworksController < ApplicationController
 		@artwork = Artwork.find(params[:id])
 	end
 	
+	def destroy
+		@artwork = Artwork.find(params[:id])
+		@artwork.destroy
+		
+		redirect_to albums_path
+	end
+	
 	attr_accessor :picture
 	
 	private

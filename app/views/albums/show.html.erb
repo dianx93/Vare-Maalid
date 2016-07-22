@@ -42,15 +42,25 @@
   <p>
     <%= f.hidden_field :author, :value => @album.author %>
   </p>
-  <!--
   <div class="upload_button_holder">
     <%= link_to("Upload", "#", :class => "upload_button") %>
     <%= f.cl_image_upload(:picture, :return_delete_token=>true) %>
   </div>
-  -->
+  <!--
   <p>
 	<%= f.cl_image_upload(:picture) %>
   </p>
+  <p>
+	<%= f.label :pilt %><br>
+	<%= f.text_field :picture %>
+  </p>
+  <%= f.label :image, "Image:" %><br />
+    <div class="upload_button_holder">
+      <%= link_to "Upload", "#", class: "btn btn-primary upload_button form-control" %>
+      <%= f.cl_image_upload :image, class: "form-control" %>
+    </div>
+    <span class="status"></span>
+  -->
   <p>
     <%= f.submit %>
   </p>
