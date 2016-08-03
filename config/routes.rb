@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+
 	get 'welcome/index'
+	
+	get 'info/index'
 	
 	resources :albums do
 		resources :artworks
