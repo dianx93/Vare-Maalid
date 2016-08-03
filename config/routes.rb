@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 	get 'welcome/index'
 	
 	get 'info/index'
+
+	get 'contact/index'
 	
 	resources :albums do
 		resources :artworks

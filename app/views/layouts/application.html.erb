@@ -11,7 +11,7 @@
   <%= link_to 'Maalid', controller: 'albums' %>
   <%= link_to 'Näitused', controller: 'exhibitions' %>
   <%= link_to 'Taustainfo', controller: 'info' %>
-  <%= link_to 'Kontakt', root_path %>
+  <%= link_to 'Kontakt', controller: 'contact' %>
 
 </head>
 <body>
@@ -22,7 +22,7 @@
 <footer>
 	<ul style="list-style-type:none">
 		<!-- LIKE/SHARE -->
-		<li><%= link_to 'Kontakt', root_path %></li>
+		<li><%= link_to 'Kontakt', controller: 'contact' %></li>
 		<li>Veebilehe looja: Diana Algma</li>
 		<li><%= link_to 'Logi sisse', root_path %></li>
 	</ul>
