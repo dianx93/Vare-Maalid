@@ -5,10 +5,30 @@
   <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <h1>Vare Maalid</h1>
+  
+  <%= link_to 'Avaleht', root_path %>
+  <%= link_to 'Maalid', controller: 'albums' %>
+  <%= link_to 'Näitused', controller: 'exhibitions' %>
+  <%= link_to 'Taustainfo', root_path %>
+  <%= link_to 'Kontakt', root_path %>
+
 </head>
 <body>
 
 <%= yield %>
 
 </body>
+<footer>
+	<ul style="list-style-type:none">
+		<!-- LIKE/SHARE -->
+		<li><%= link_to 'Kontakt', root_path %></li>
+		<li>Veebilehe looja: Diana Algma</li>
+		<li><%= link_to 'Logi sisse', root_path %></li>
+	</ul>
+	<!-- eemaldada/muuta paremaks	-->
+	<p>
+	  Aeg praegu: <%= Time.now %>
+	</p>
+</footer>
 </html>
