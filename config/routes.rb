@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
 	get 'welcome/index'
 	
-	get 'info/index'
+	get 'info', to: 'info#index'
 
-	get 'contact/index'
+	get 'contact', to: 'contact#index'
 	
 	resources :albums do
 		resources :artworks
